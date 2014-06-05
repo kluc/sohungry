@@ -15,10 +15,10 @@
 		</div>
 		<div class="upload">
 			<form onsubmit="return false;">
-				Ingredient: <input type="text" name="ing" /> 
-				Amount: <input type="number" name="amount"/>
-				<select name="type">
-					<option disabled selected>--Select--</option>
+				Ingredient: <input type="text" id="ing"/> 
+				Amount: <input type="number" id="amt"/>
+				<select name="type" id="type">
+					<option disabled selected id="default">--Select--</option>
 					<option value="tsp">tsp</option>
 					<option value="tbsp">tbsp</option>
 					<option value="cup">cup</option>
@@ -29,25 +29,27 @@
 					<option value="lb">pounds (lb)</option>
 				
 				</select>
-				<button type="submit" onclick="ingredientSubmit()">Add Ingredient</button> 
+				<button id="ingadd" type="submit" onclick="ingredientSubmit()">Add Ingredient</button> 
 			</form>
 			<br />
 			<form onsubmit="return false;">
-				<textarea rows="10" cols="30">
+				<textarea rows="10" cols="30" id="step">
 				</textarea>
 				<br />
-				<button type="submit"onclick="/scripts/instructionSubmit()">Add Step</button>
+				<button type="submit"onclick="instructionSubmit()">Add Step</button>
 			</form>
 			<form>
 				<div id="recipe">
 					<p>Recipe</p>
 				
 					<p>Ingredients</p>
-					<div id="inglist">
+					<ul id="inglist">
 					
-					</div>
-					<p id="instlist">Instructions</p>
-				
+					</ul>
+					<p>Instructions</p>
+					<ol id = "instlist">
+					
+					</ol>
 				
 				
 				</div>
