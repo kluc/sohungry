@@ -83,4 +83,11 @@ a.redirect{
 	margin-right: 5%;
 }
 
+.delete{
+	background-color: transparent;
+	border: none;
+	font-weight: bolder;
+	
+
+}
 

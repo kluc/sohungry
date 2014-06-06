@@ -38,9 +38,10 @@
 				<br />
 				<button type="submit"onclick="instructionSubmit()">Add Step</button>
 			</form>
-			<form>
-				<div id="recipe">
-					<p>Recipe</p>
+			<form action="/addrecipe">
+				<div id="recipe"><button type="button" onclick="deleteCheckedItems()">Delete checked Items</button>
+					<p>Recipe Name</p>
+					<input type="text" id="recipeName"></input>
 				
 					<p>Ingredients</p>
 					<ul id="inglist">
@@ -53,7 +54,7 @@
 				
 				
 				</div>
-			
+				<input type="submit" value="Submit"></input>
 			
 			</form>
 		</div>
