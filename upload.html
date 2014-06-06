@@ -38,10 +38,10 @@
 				<br />
 				<button type="submit"onclick="instructionSubmit()">Add Step</button>
 			</form>
-			<form action="/addrecipe">
+			<form action="/addrecipe" method="post">
 				<div id="recipe"><button type="button" onclick="deleteCheckedItems()">Delete checked Items</button>
 					<p>Recipe Name</p>
-					<input type="text" id="recipeName"></input>
+					<input type="text" id="recipeName" name="recipeName"></input>
 				
 					<p>Ingredients</p>
 					<ul id="inglist">
