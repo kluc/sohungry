@@ -22,6 +22,13 @@ function deleteCheckedItems(){
 
 
 function ingredientSubmit(){
+	$(".amt").clone().first().appendTo(".ingredients:first");
+	$(".type").clone().first().appendTo(".ingredients");
+	$(".ing").clone().first().appendTo(".ingredients");
+
+
+
+	/*
 	var ing = document.getElementById('ing');
 	var amt = document.getElementById('amt');
 	var type = document.getElementById('type');
@@ -30,6 +37,7 @@ function ingredientSubmit(){
 	
 	
 	var node = document.createElement("li");
+	node.setAttribute("name", "ing");
 	var textnode = document.createTextNode(amt.value + " " + type.value + " " + ing.value);
 	document.getElementById('inglist').appendChild(node);
 	
@@ -44,12 +52,16 @@ function ingredientSubmit(){
 	amt.value = "";
 	$('type option').prop('selected', function(){
 		return this.defaultSelected;
-	});
+	});*/
 }
 
 function instructionSubmit(){
+	$(".step").clone().first().appendTo(".instructions");
+
+	/*
 	var step = document.getElementById('step');
 	var node = document.createElement("li");
+	node.setAttribute("name", "inst");
 	var textnode = document.createTextNode(step.value);
 	var d = document.createElement("input");
 	d.className = "delete";
@@ -59,5 +71,5 @@ function instructionSubmit(){
 
 	document.getElementById('instlist').appendChild(node);
 	
-	step.value = "";
+	step.value = "";*/
 }

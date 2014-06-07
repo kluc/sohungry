@@ -87,7 +87,18 @@ a.redirect{
 	background-color: transparent;
 	border: none;
 	font-weight: bolder;
-	
+}
+
+.ingredients{
+	margin-left: 30%;
+	margin-right: 30%;
+	border: solid;
+}
+
+.instructions{
+	border:solid;
+	margin-left: 30%;
+	margin-right: 30%;
 
 }
 

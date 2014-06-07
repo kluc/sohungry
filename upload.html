@@ -14,30 +14,42 @@
 			<a href="/">Soo Hungryyy</a>
 		</div>
 		<div class="upload">
-			<form onsubmit="return false;">
-				Ingredient: <input type="text" id="ing"/> 
-				Amount: <input type="number" id="amt"/>
-				<select name="type" id="type">
-					<option disabled selected id="default">--Select--</option>
-					<option value="tsp">tsp</option>
-					<option value="tbsp">tbsp</option>
-					<option value="cup">cup</option>
-					<option value="floz">fl oz</option>
-					<option value="pint">pint</option>
-					<option value="quart">quart</option>
-					<option value="oz">ounces (oz)</option>
-					<option value="lb">pounds (lb)</option>
+			<form action="/addrecipe" method="post">
 				
-				</select>
-				<button id="ingadd" type="submit" onclick="ingredientSubmit()">Add Ingredient</button> 
-			</form>
-			<br />
-			<form onsubmit="return false;">
-				<textarea rows="10" cols="30" id="step">
-				</textarea>
+				<div>
+					<p>Recipe Name</p>
+					<input type="text" id="recipeName" name="recipeName"></input>
+				</div>
+				Amount:
+				Ingredient:
+				<div class="ingredients"> 
+					<input type="number" class="amt" name="amt"/>
+					<select class="type" name="type" >
+						<option disabled selected id="default">--Select--</option>
+						<option value="tsp">tsp</option>
+						<option value="tbsp">tbsp</option>
+						<option value="cup">cup</option>
+						<option value="floz">fl oz</option>
+						<option value="pint">pint</option>
+						<option value="quart">quart</option>
+						<option value="oz">ounces (oz)</option>
+						<option value="lb">pounds (lb)</option>
+					</select> 
+					<input type="text" class="ing" name="ing"/> 
+				</div>	
+				<button id="ingadd" type="button" onclick="ingredientSubmit()">Add Ingredient</button> 
+		
 				<br />
-				<button type="submit"onclick="instructionSubmit()">Add Step</button>
+				<br />
+				<div class="instructions">
+					<textarea rows="5" cols="40" class="step" name="step">Type instructions here</textarea>
+				</div>
+				<br />
+				<button type="button" onclick="instructionSubmit()">Add Step</button>
+				<input type="submit" value="Submit"></input>
 			</form>
+			
+			<!--
 			<form action="/addrecipe" method="post">
 				<div id="recipe"><button type="button" onclick="deleteCheckedItems()">Delete checked Items</button>
 					<p>Recipe Name</p>
@@ -56,7 +68,7 @@
 				</div>
 				<input type="submit" value="Submit"></input>
 			
-			</form>
+			</form>-->
 		</div>
 	
 	
